@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage{graphicx} 
+\usepackage{amsmath}
+\title{Assignment 3}
+\author{J.A. van Ruijven \\ 2006698 }
+\date{December 2025}
+\begin{document}
+\maketitle
+\section{Question 1}
+\subsection{a}
+
+\begin{align*}
+	Y_t &= \theta X_{t-1} + Z_t + W_t \\
+	    &= \theta^2 X_{t-2} + Z_t + \theta^1 Z_{t-1} \\
+	    &= \theta^3 X_{t-3} + Z_t + \theta^1 Z_{t-1} + \theta^2 Z_{t-2} \\
+	    &= \theta^t X_0 + \sum_{i=0}^{t-1} \theta^i Z_{t-i}
+\end{align*}
+
+\begin{align*}
+	E[X_t] &= E[ \theta^t X_0 + \sum_{i=0}^{t-1} \theta^i Z_{t-i}] \\
+	       &= E[ \theta^t X_0] + E[\sum_{i=0}^{t-1} \theta^i Z_{t-i}] \\
+	       &= 0 + 0 = 0 \\
+\end{align*}
+
+\begin{align*}
+	\gamma_y(t+h, t) &= E[ (\theta^t X_0 + \sum_{i=0}^{t-1} \theta^i Z_{t-i} - 0) * (\theta^{t+h} X_0 + \sum_{i=0}^{t + h -1} \theta^i Z_{t + h-i} - 0)] \\
+			 &= E[(\theta^{2t + h} X_0^2 + \theta^t X_0 *  \sum_{i=0}^{t+h-1} \theta^i Z_{t+h-i} + \theta^{t+h} X_0 *  \sum_{i=0}^{t-1} \theta^i Z_{t-i} + \sum_{i=0}^{t+h-1} \theta^i Z_{t+h-i} * \sum_{i=0}^{t-1} \theta^i Z_{t-i} ] \\
+			 &= 0 + 0 + 0 + E[\sum_{i=0}^{t+h-1} \theta^i Z_{t+h-i} * \sum_{i=0}^{t-1} \theta^i Z_{t-i}]
+\end{align*}
+
+\subsection{b}
+\subsection{c}
+\section{Question 2}
+\subsection{a}
+\subsection{b}
+\subsection{c}
+\section{Question 3}
+\subsection{a}
+\subsection{b}
+\subsection{c}
+\end{document}
+
