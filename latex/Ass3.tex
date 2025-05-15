@@ -11,20 +11,20 @@
 
 \begin{align*}
 	Y_t &= \theta X_{t-1} + Z_t + W_t \\
-	    &= \theta^2 X_{t-2} + Z_t + \theta^1 Z_{t-1} \\
-	    &= \theta^3 X_{t-3} + Z_t + \theta^1 Z_{t-1} + \theta^2 Z_{t-2} \\
-	    &= \theta^t X_0 + \sum_{i=0}^{t-1} \theta^i Z_{t-i}
+	    &= \theta^2 X_{t-2} + Z_t + \theta^1 Z_{t-1} + W_t \\
+	    &= \theta^3 X_{t-3} + Z_t + \theta^1 Z_{t-1} + \theta^2 Z_{t-2} + W_t \\
+	    &= \theta^t X_0 + \sum_{i=0}^{t-1} \theta^i Z_{t-i} + W_t
 \end{align*}
 
 \begin{align*}
-	E[X_t] &= E[ \theta^t X_0 + \sum_{i=0}^{t-1} \theta^i Z_{t-i}] \\
-	       &= E[ \theta^t X_0] + E[\sum_{i=0}^{t-1} \theta^i Z_{t-i}] \\
-	       &= 0 + 0 = 0 \\
+	E[Y_t] &= E[ \theta^t X_0 + \sum_{i=0}^{t-1} \theta^i Z_{t-i} + W_t] \\
+	       &= E[ \theta^t X_0] + E[\sum_{i=0}^{t-1} \theta^i Z_{t-i}] + E[W_t] \\
+	       &= 0 + 0 + 0 = 0 \\
 \end{align*}
 
 \begin{align*}
-	\gamma_y(t+h, t) &= E[ (\theta^t X_0 + \sum_{i=0}^{t-1} \theta^i Z_{t-i} - 0) * (\theta^{t+h} X_0 + \sum_{i=0}^{t + h -1} \theta^i Z_{t + h-i} - 0)] \\
-			 &= E[(\theta^{2t + h} X_0^2 + \theta^t X_0 *  \sum_{i=0}^{t+h-1} \theta^i Z_{t+h-i} + \theta^{t+h} X_0 *  \sum_{i=0}^{t-1} \theta^i Z_{t-i} + \sum_{i=0}^{t+h-1} \theta^i Z_{t+h-i} * \sum_{i=0}^{t-1} \theta^i Z_{t-i} ] \\
+	\gamma_y(t+h, t) &= E[ (\theta^t X_0 + \sum_{i=0}^{t-1} \theta^i Z_{t-i} + W_t - 0) * (\theta^{t+h} X_0 + \sum_{i=0}^{t + h -1} \theta^i Z_{t + h-i} + W_{t+h} - 0)] \\
+			 &= \begin{aligned} E[(\theta^{2t + h} X_0^2 + \theta^t X_0 *  \sum_{i=0}^{t+h-1} \theta^i Z_{t+h-i} + \theta^{t+h} X_0 *  \sum_{i=0}^{t-1} \theta^i Z_{t-i} + \sum_{i=0}^{t+h-1} \theta^i Z_{t+h-i} * \sum_{i=0}^{t-1} \theta^i Z_{t-i} \\ + \theta^t X_0 * W_t+h + \theta^{t+h} W_t + \sum_{i=0}^{t-1} \theta^i Z_{t-i} * W_{t+h} + \sum_{i=0}^{t + h-1} \theta^i Z_{t +h -i} * W_t ] \end{aligned} \\
 			 &= 0 + 0 + 0 + E[\sum_{i=0}^{t+h-1} \theta^i Z_{t+h-i} * \sum_{i=0}^{t-1} \theta^i Z_{t-i}]
 \end{align*}
 

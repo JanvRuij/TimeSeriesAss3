@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1747310459.58755 "Ass3.tex" "latex_output/Ass3.pdf" "Ass3" 1747310459.86019 0
+["pdflatex"] 1747312575.70026 "Ass3.tex" "latex_output/Ass3.pdf" "Ass3" 1747312575.96999 0
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1742685315 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1742685315 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1742685315 1324 c910af8c371558dc20f2d7822f66fe64 ""
@@ -52,8 +52,8 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1742685315 42087 b0f9697c952c8f5a8eede4134282cb0d ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1746299969 5306876 69c328245ae101f6bc10b01e1f2bf9d5 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1746299966 2008231 993d64ba60e230af65a7a73474d3e0c7 ""
-  "Ass3.tex" 1747310459.44204 1327 7d0263a186a70eecbc113c13a095a5c3 ""
-  "latex_output/Ass3.aux" 1747310459.82037 1172 8feef63d8f5115b8fe118ca066dd61e8 "pdflatex"
+  "Ass3.tex" 1747312574.12806 1557 dfdf6af6382af2359c5e4bd233e1940e ""
+  "latex_output/Ass3.aux" 1747312575.93303 1172 8feef63d8f5115b8fe118ca066dd61e8 "pdflatex"
   (generated)
   "latex_output/Ass3.aux"
   "latex_output/Ass3.log"
