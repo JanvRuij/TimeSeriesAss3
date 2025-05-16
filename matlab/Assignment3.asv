@@ -17,7 +17,7 @@ function l = loglik(X, theta)
     l = -log(SSE / T);             
 end
 
-%% 4
+%% 4 A
 
 % Load the data
 load('data.mat');  % Assumes variable is called 'data' or a table with named columns
@@ -36,7 +36,7 @@ for p = 0:5
     for q = 0:5
         try
             model = arima(p, 0, q);
-            [fit,~,logL] = estimate(model, Spread, 'Display', 'off');
+            [fit,~,logL] = estimate(model, Spread);
             
             numParams = p + q + 2;
             [aic, bic] = aicbic(logL, numParams, T);
@@ -54,6 +54,8 @@ disp(AIC);
 disp('BIC Matrix:');
 disp(BIC);
 
+
+%%
 model = arima(0, 0, 4);
 [fit, ~, ~, info] = estimate(model, Spread, 'Display', 'off');
 
@@ -105,9 +107,8 @@ h = 7;
 futureData = data(data.Date > datetime(2022, 8, 31), :);
 actuals = futureData.Spread(1:h); 
 
-forecast_errors = YF - actuals
 
-MSPE = mean((forecast_errors).^2);
+MSPE = mean((YF - actuals).^2);
 fprintf('MSPE over 7-step forecast: %.4f\n', MSPE);
 
 
@@ -128,5 +129,11 @@ xlabel('Date');
 ylabel('Spread');
 title('Forecasts with 95% Confidence Interval');
 grid on;
+
+disp('Forecasts (YF):');
+disp(YF);
+
+disp('Actuals:');
+disp(actuals);
 
 
