@@ -381,5 +381,29 @@ Thus,
 }
 \]
 \subsection{c}
+\textbf{Results and Interpretation}
+
+\begin{itemize}
+    \item The true value of the MA(1) parameter is $\theta = 0.7$.
+    \item The MLE from a single sample path was $\hat{\theta} = 0.64981$, which is reasonably close to the true value.
+    \item From 1000 simulated paths, the average MLE was $\text{Mean}(\hat{\theta}) = 0.70168$ with variance $\text{Var}(\hat{\theta}) = 0.0010304$.
+    \item These results suggest that the MLE is nearly unbiased and has low variance, supporting its consistency and efficiency.
+    \item The histogram of estimates shows a bell-shaped curve centered around 0.7, indicating approximate normality of the MLE distribution.
+\end{itemize}
 \end{document}
 
+\section{Question 4}
+
+\subsection{2}
+\textbf{Model Selection using AIC and BIC}
+We fitted all ARMA$(p,q)$ models for $0 \leq p,q \leq 5$ to the spread series using maximum likelihood. Model performance was evaluated using the Akaike Information Criterion (AIC) and the Bayesian Information Criterion (BIC).
+The model with the lowest AIC was ARMA(3,3), with an AIC value of $-2.5941$. However, the BIC, which penalizes model complexity more heavily, favored the ARMA(1,1) model with a BIC of $-2.5858$.
+
+To balance goodness of fit and parsimony, we proceed with the ARMA(1,1) model for further analysis.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.6\textwidth]{ACVF.png} % Replace with your filename
+    \caption{This is a caption for the figure}
+    \label{fig:my_image}
+\end{figure}
